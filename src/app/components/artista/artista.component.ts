@@ -16,6 +16,7 @@ export class ArtistaComponent {
     this.loading = true;
     this.router.params.subscribe(params => {
       this.getArtista(params['id']);
+      this.getTopTracks(params['id']);
     })
   }
 
@@ -26,5 +27,14 @@ export class ArtistaComponent {
       this.artista = artista;
       this.loading = false;
     })
+  }
+
+  getTopTracks(id: string) {
+    this.loading = true;
+    this.spotify.getTopTracks(id).subscribe( topTracks => {
+           
+      console.log(topTracks);      
+      this.loading = false;
+    });
   }
 }
