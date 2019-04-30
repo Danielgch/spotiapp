@@ -9,12 +9,20 @@ hr {
     border-color: white !important;
 }
 
+
+th{
+    color: white !important;
+}
+tr{
+    color: white !important;
+}
+
 .puntero {
     cursor: pointer;
 }
 
 .img-circle {
-    border-radius: 100%;
+    border-radius: 100% !important;
     width: 150px;
 }
 

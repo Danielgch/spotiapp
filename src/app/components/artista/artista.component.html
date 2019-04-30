@@ -1,7 +1,7 @@
-<app-loading *ngIf="loading"></app-loading>
+<app-loading *ngIf="loadingArtist"></app-loading>
 
 
-<div class="row animated fadeIn" *ngIf="!loading">
+<div class="row animated fadeIn" *ngIf="!loadingArtist">
     <div class="col-2">
         <img [src]="artista.images | noimage" class="img-thumbnail img-circle">
     </div>
